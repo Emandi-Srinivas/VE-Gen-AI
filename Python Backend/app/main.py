@@ -259,7 +259,7 @@ async def generate_image(image_prompt: ImagePrompt):
         print(f"Using seed: {random_seed}")
         
         # Initialize the client with the specified model and token
-        client = InferenceClient("black-forest-labs/FLUX.1-schnell", token="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")
+        client = InferenceClient("black-forest-labs/FLUX.1-schnell", token=)
         # Generate the image without specifying optional parameters
         image = client.text_to_image(
             prompt=encoded_prompt,
@@ -317,7 +317,7 @@ def ms_to_timecode(ms):
     return f"{hours:02}:{minutes:02}:{seconds:02},{milliseconds:03}"
 
 def generate_images_for_prompt1(prompts_data):
-    array = ["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", "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", "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"]
+    array = []
 
     for idx, prompt in enumerate(prompts_data["prompts"], start=1):
         sentence = prompt["prompt_text"]
